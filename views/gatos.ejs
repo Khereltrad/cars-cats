@@ -1,0 +1,16 @@
+
+
+
+
+
+
+app.get("/:codigo",(req,res)) => {
+    //! llega desde la url
+    const   codigo = req.params.codigo;
+    //tenemos que encontrar el objerto con los datos del gato
+    let xx =gatos.find(gato => gato.codigo = codigo);
+    //devolvemos un template ejs con los datos del gato
+    res.render("detalle",{gato: xx});
+}
+
+app.listen(port,() => console.log(`Listening on port: ${`))
