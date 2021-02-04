@@ -15,6 +15,9 @@
 </head>
 <body>
     <style>
+        body{
+            background-image: url(imgs/patron-pow-colorido.jpg);
+        }
         #gatico{
             background-color: lavender;
             background-image: url(./imgs/patrondefondogatos.jpg);
@@ -23,14 +26,24 @@
         }
         .row{
             place-content: center;
-        }
+            background-color: lightgray;
+            margin: auto;
+            }       
         img{
             height: 400px;
             width: auto;
         }
+        button{
+            background-color: darkgoldenrod;
+            height: 37px;
+            border-radius: 18px;
+        }
     </style>
     <div class="container pt-5">
-        <div class="row">
+        <div class="navbar">
+            <a href="http://localhost:8000/cats.html"><button>Volver a Gatos ^^</button></a>
+        </div>
+        <div class="row" style="width: 300px;">
             <h1>Gato error <%= gato.id %></h1>
         </div>
         <div id="gatico"class="row m-3">
