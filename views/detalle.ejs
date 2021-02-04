@@ -15,27 +15,33 @@
 </head>
 <body>
     <style>
-        row{
+        #gatico{
+            background-color: lavender;
+            background-image: url(./imgs/patrondefondogatos.jpg);
+            background-position-y: center;
+            border: solid;
+        }
+        .row{
             place-content: center;
         }
         img{
-            height: inherit;
+            height: 400px;
             width: auto;
         }
     </style>
-    <div class="container">
+    <div class="container pt-5">
         <div class="row">
-            <h1>` Gato error ${num}`</h1>
+            <h1>Gato error <%= gato.id %></h1>
         </div>
-        <br></br>
+        <div id="gatico"class="row m-3">
+            <img src="imgs/error_<%= gato.id %>.jpg">
+        </div>
+        <div class="row m-3">
+            <h5>Nombre: <%= gato.nombre  %> </h5> 
+        </div>
         <div class="row">
-            <img src="imgs/error_400.jpg">
-        </div>
-        <div class="row">
-            <h5>Nombre: Chape con guantes</h5> 
-            <h5>Codigo error: 400</h5>
-            <h5>detalle:  indica que el servidor no puede o no procesará la petición debido a algo que es percibido como un error del cliente</h5>
-        </div>
+            <h5>descripción: <%= gato.descripcion  %> </h5>
+        </div>   
     </div>
 </body>
 </html>
